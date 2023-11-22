@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".AnimalDetailActivity">
+
+    <Button
+        android:id="@+id/backBtn"
+        style="?attr/materialIconButtonFilledTonalStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:drawableEnd="@drawable/baseline_arrow_back_24"
+        android:drawableTint="?android:colorPrimary"
+        android:elevation="1dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/persian_cat"
+            android:transitionName="imageTrans" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="15dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat2"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Persian Cat"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/likeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple"
+                    android:src="@drawable/baseline_favorite_border_24"
+                    app:tint="?android:colorPrimary" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:drawableTint="?android:textColorTertiaryInverse"
+                android:gravity="center_vertical"
+                android:text="Slipi, Jakarta Barat" />
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/TextAppearance.Material3.HeadlineMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp2.000.000"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <Button
+                android:id="@+id/openARBtn"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:drawableEnd="@drawable/baseline_blur_circular_24"
+                android:drawableTint="?android:colorPrimary"
+                android:gravity="center"
+                android:text="Open AR" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Type"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:id="@+id/type"
+                            style="@style/TextAppearance.Material3.BodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Felis Catus"
+                            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Sex"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/sex"
+                            style="@style/TextAppearance.Material3.BodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Age"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/age"
+                            style="@style/TextAppearance.Material3.BodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 Month"
+                            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et nibh est. Donec sed commodo metus. In metus ante, placerat vel nibh id, vehicula interdum metus. Curabitur ut feugiat nunc. Nulla sit amet lobortis purus. Maecenas eleifend vitae enim vel dictum. In hac habitasse platea dictumst. Donec a lobortis felis, mollis rutrum eros. Proin faucibus arcu libero, vel tristique magna consectetur non. Vestibulum tempor elit eu pretium commodo. Aliquam ac ligula in mi finibus maximus. Nullam nibh lectus, viverra in eleifend sed, congue sit amet metus. Nullam commodo dolor ut neque tristique semper. Sed lacus diam, lacinia a iaculis non, ultrices vel sem.
+
+Ut pharetra nec ante et viverra. Nulla facilisi. Maecenas at quam eget velit accumsan tempus a vel risus. Ut volutpat placerat mauris. Pellentesque quis scelerisque erat. Pellentesque luctus vehicula bibendum. Morbi sit amet neque vulputate, eleifend metus sed, commodo risus. Aenean diam ligula, tempor nec posuere id, elementum et turpis. Praesent ac sapien id velit vehicula vestibulum. Donec non libero posuere est porttitor efficitur quis a justo. Curabitur nibh velit, eleifend non pellentesque ac, aliquet nec massa.
+
+Mauris lacinia sollicitudin gravida. Vestibulum et mollis metus. Nulla blandit neque et enim convallis dictum. Praesent scelerisque pulvinar sapien et imperdiet. Cras sodales accumsan nibh facilisis tincidunt. Donec laoreet tortor ut tincidunt ullamcorper. Duis vitae suscipit erat. Suspendisse tristique sit amet augue at eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis nisi nulla, id viverra lorem consequat et. Etiam elementum sit amet ex et vestibulum. Integer quis ante purus. Praesent facilisis felis nec sodales lobortis. Phasellus ultrices tempus lacus sit amet rutrum.
+
+Donec vestibulum urna imperdiet lacus commodo maximus. Nam sit amet convallis dolor. Aenean imperdiet ultrices justo, sodales tempus neque iaculis id. Nullam viverra risus ac mi mattis suscipit. Nam vulputate tellus mi, eu sagittis purus tempor eu. Aenean tristique neque eget odio viverra sodales. Nulla vel dignissim augue. In commodo porta varius. Proin vulputate vehicula ante, ut posuere purus. Donec tristique tempus erat eu suscipit. Mauris ornare, purus ut convallis ultricies, leo lacus lacinia odio, ut bibendum risus mi non sapien. Ut iaculis elementum ex a tristique. Nullam pellentesque feugiat est, id vehicula tortor. Mauris feugiat massa tortor, sed pharetra elit efficitur vitae. Sed scelerisque semper euismod." />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:colorBackground"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/mailBtn"
+            style="?attr/materialIconButtonFilledTonalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:drawableEnd="@drawable/baseline_mail_24"
+            android:drawableTint="?android:colorPrimary"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/adoptBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="Adopt Me" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

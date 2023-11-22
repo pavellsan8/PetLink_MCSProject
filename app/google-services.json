@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "920913808403",
+    "firebase_url": "https://petlink-f5cd1-default-rtdb.firebaseio.com",
+    "project_id": "petlink-f5cd1",
+    "storage_bucket": "petlink-f5cd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920913808403:android:3d09489e6d149b3e5583e6",
+        "android_client_info": {
+          "package_name": "com.example.petlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920913808403-ami5qqfs3ubccq7gncgauagvgtrj07hl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXJp-eQQFp-3x3HlpHJ56qRbD-YKEByiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920913808403-ami5qqfs3ubccq7gncgauagvgtrj07hl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
